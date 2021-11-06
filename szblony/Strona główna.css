@@ -1,0 +1,54 @@
+.slider{
+    margin: 30px 0;
+}
+
+.slider-produkt-container{
+    border: 2px solid black;
+}
+.produkt{
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 20px 0 15px 15px;
+    height: 110%;
+}
+.produkt img{
+    width: 100%;
+    max-width: 250px;
+    padding: 30px 0;
+}
+body{
+    margin:  0;
+}
+.slider_image {
+    background-image: url("img/0.jpg");
+    background-color: #cccccc;
+    height: 60vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+}
+
+.left_button {
+    left: 2%;
+}
+
+.right_button {
+    right: 2%;
+}
+
+.slider_button {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    font-size: 50px;
+    transform: translate(0, -50%);
+    font-weight: bold;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.61);
+}
+.slider_button:hover{
+    color: rgb(255, 255, 255);
+}

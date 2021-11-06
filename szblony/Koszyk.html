@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="src/icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Ubuntu:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="Koszyk.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="src/logo.png" alt="logo" height="40px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex mx-auto nav-search">
+                    <input type="text" name="">
+                    <a href="#"><img src="src/icon/magnifying-glass.png" alt=""></a>
+                </form>
+                <ul class="navbar-nav mb-2 mb-lg-0 d-inline-print-flex justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">
+                            <figure class="my-auto">
+                                <img src="src/icon/messenger.png" alt="" width="30px">
+                                <figcaption>Kontakt</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">
+                            <figure class="my-auto">
+                                <img src="src/icon/shopping-cart.png" alt="" width="30px">
+                                <figcaption>Koszyk</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">
+                            <figure class="my-auto">
+                                <img src="src/icon/user.png" alt="" width="30px">
+                                <figcaption>Logowanie</figcaption>
+                            </figure>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-xl mt-4 pt-5">
+        <div class="row">
+            <div class="col-12 section-title my-3">
+                <h2>Twój koszyk</h2>
+                <span class="line"></span>
+            </div>
+            <div class="col-12 mb-3">
+                <div class="cart-bar">
+                    <div class="crat-bar-l"><input class="form-check-input cart-bar-check" type="checkbox" value=""
+                            id="flexCheckDefault2">
+                        <span style="padding-left: 15px;">Zaznacz wszystko</span>
+                    </div>
+                    <div class="cart-bar-r">
+                        <span>
+                            <img src="src/icon/love.png" alt="" width="30px"> Zapisz koszyk
+                        </span>
+                        <span>
+                            <img src="src/icon/dustbin.png" alt="" width="30px"> Usuń
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRRODUKT LIST -->
+
+            <div class="col-12 col-lg-8">
+                <div class="s-produkt py-5">
+                    <input class="form-check-input cart-check" type="checkbox" value="" id="flexCheckDefault2">
+                    <div class="row justify-content-end">
+                        <div class="col-lg-4 col-12 s-img"><img src="src/produkty/p1.png" alt=""></div>
+                        <div class="col-12 col-lg-8">
+                            <h4>Komputer Elite H3465, Core i5-8400, 16 GB, GTX 1060</h4>
+                            <ul class="ul-none">
+                                <li><b>Chipset graficzny:</b> GTX 1060</li>
+                                <li><b>Dysk:</b> 240GB SSD</li>
+                                <li><b>Model procesora:</b> Core i5-8400</li>
+                                <li><b>System operacyjny:</b> Brak systemu</li>
+                                <li><b>Wielkość pamięci RAM:</b> 16 GB</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-lg-8 s-right-panel">
+                            <div class="row">
+                                <div class="col-12"><span class="s-price">2 499,00 Zł</span></div>
+                                <div class="col-12"><span class="s-rating">489 ocen
+                                        <img src="src/icon/star_a.png" alt="">
+                                        <img src="src/icon/star_a.png" alt="">
+                                        <img src="src/icon/star_a.png" alt="">
+                                        <img src="src/icon/star_b.png" alt="">
+                                        <img src="src/icon/star_c.png" alt="">
+                                    </span></div>
+                                <div class="col-12">
+                                    <div class="s-produkt-counter">
+                                        <div class="counter-button">-</div>
+                                        <div class="counter"><input type="text" value="1"></div>
+                                        <div class="counter-button">+</div>
+                                    </div>
+                                    <div class="s-produkt-button">
+                                        <h4>Anuluj</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s-produkt py-5">
+                    <input class="form-check-input cart-check" type="checkbox" value="" id="flexCheckDefault2">
+                    <div class="row justify-content-end">
+                        <div class="col-lg-4 col-12 s-img"><img src="src/produkty/p2.png" alt=""></div>
+                        <div class="col-12 col-lg-8">
+                            <h4>Komputer Vist Ryzen 7 2700, 16 GB, Radeon RX 570</h4>
+                            <ul class="ul-none">
+                                <li><b>Chipset graficzny:</b> Radeon RX 570</li>
+                                <li><b>Dysk:</b> 2TB HDD + 240GB SSD</li>
+                                <li><b>Model procesora:</b> Ryzen 7 2700</li>
+                                <li><b>System operacyjny:</b> Windows 10 Pro</li>
+                                <li><b>Wielkość pamięci RAM:</b> 32 GB</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-lg-8 s-right-panel">
+                            <div class="row">
+                                <div class="col-12"><span class="s-price">5 899,00 Zł</span></div>
+                                <div class="col-12"><span class="s-rating">489 ocen
+                                        <img src="src/icon/star_a.png" alt="">
+                                        <img src="src/icon/star_a.png" alt="">
+                                        <img src="src/icon/star_a.png" alt="">
+                                        <img src="src/icon/star_b.png" alt="">
+                                        <img src="src/icon/star_c.png" alt="">
+                                    </span></div>
+                                <div class="col-12">
+                                    <div class="s-produkt-counter">
+                                        <div class="counter-button">-</div>
+                                        <div class="counter"><input type="text" value="1"></div>
+                                        <div class="counter-button">+</div>
+                                    </div>
+                                    <div class="s-produkt-button">
+                                        <h4>Anuluj</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s-produkt py-5">
+                    <input class="form-check-input cart-check" type="checkbox" value="" id="flexCheckDefault2">
+                    <div class="row justify-content-end">
+                        <div class="col-lg-4 col-12 s-img"><img src="src/produkty/p1.png" alt=""></div>
+                        <div class="col-12 col-lg-8">
+                            <h4>Komputer Elite H3465, Core i5-8400, 16 GB, GTX 1060</h4>
+                            <ul class="ul-none">
+                                <li><b>Chipset graficzny:</b> GTX 1060</li>
+                                <li><b>Dysk:</b> 240GB SSD</li>
+                                <li><b>Model procesora:</b> Core i5-8400</li>
+                                <li><b>System operacyjny:</b> Brak systemu</li>
+                                <li><b>Wielkość pamięci RAM:</b> 16 GB</li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-lg-8 s-right-panel">
+                            <div class="row">
+                                <div class="col-12"><span class="s-price">2 499,00 Zł</span></div>
+                                <div class="col-12"><span class="s-rating">489 ocen
+                                        <img src="src/icon/star_a.png" alt="">
+                                        <img src="src/icon/star_a.png" alt="">
+                                        <img src="src/icon/star_a.png" alt="">
+                                        <img src="src/icon/star_b.png" alt="">
+                                        <img src="src/icon/star_c.png" alt="">
+                                    </span></div>
+                                <div class="col-12">
+                                    <div class="s-produkt-counter">
+                                        <div class="counter-button">-</div>
+                                        <div class="counter"><input type="text" value="1"></div>
+                                        <div class="counter-button">+</div>
+                                    </div>
+                                    <div class="s-produkt-button">
+                                        <h4>Anuluj</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-4 px-3">
+                <div class="cart">
+                    <div><img style="margin-top: -10px;" src="src/icon/shopping-cart.png" width="35px" alt="">
+                        <h4 style="display: inline-block;">Łączny koszt:</h4>
+                        <span>
+                            <div class="s-price"
+                                style="text-align: right; display: inline; float: right; margin-top: -10px;">8 398 Zł
+                            </div>
+                        </span>
+                    </div><br>
+                    <div class="cart-button-1">Kontynuj zakupy</div>
+                    <div class="cart-button-2">Dostawa i płatność -></div>
+                    <div style="color: rgb(87, 87, 87); text-align: center; font-size: 20px;padding-top: 20px;">Kupuje
+                        na raty</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-3 mt-lg-5">
+                <figure class="f-container-logo">
+                    <img src="src/logo.png" alt="logo" height="40px" class="f-logo">
+                    <figcaption class="f-logo-text">
+                        <b>Adres:</b> Gola 25B, 63-640 Gola<br>
+                        <b>Telefon:</b> 62 597 10 54
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-lg-6 mt-lg-5">
+                <div class="row">
+                    <div class="col-md-4 col-12">
+                        <ul class="f-list">
+                            <li><a href="#"><b>Moje Konto</b></a></li>
+                            <li><a href="#">Moje zamówienia</a></li>
+                            <li><a href="#">Moje informacje osobiste</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <ul class="f-list">
+                            <li><a href="#"><b>Informacje</b></a></li>
+                            <li><a href="#">Regulamin</a></li>
+                            <li><a href="#">O nas</a></li>
+                            <li><a href="#">Polityka prywatności</a></li>
+                            <li><a href="#">Newsletter</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <ul class="f-list">
+                            <li><a href="#"><b>Centrum pomocy</b></a></li>
+                            <li><a href="#">Jak złozyc zamówienie</a></li>
+                            <li><a href="#">Kontakt</a></li>
+                            <li><a href="#">Wrunki współpracy B2B</a></li>
+                            <li><a href="#">Rozwiązywanie problemów</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="row f-social">
+                    <div class="col-12 f-social-title"><b>Nasze social media</b></div>
+                    <div class="col-md-4 col-12 f-social-icon ">
+                        <figure>
+                            <img src="src/icon/youtube.png" alt="yt">
+                            <figcaption>YouTube</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-4 col-12 f-social-icon ">
+                        <figure>
+                            <img src="src/icon/facebook.png" alt="fb">
+                            <figcaption>Facebook</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-4 col-12 f-social-icon ">
+                        <figure>
+                            <img src="src/icon/instagram.png" alt="insta">
+                            <figcaption>Instagram</figcaption>
+                        </figure>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

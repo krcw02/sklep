@@ -1,0 +1,79 @@
+.filtr-list{
+    margin-left: -30px;
+}
+.form-check-input:checked{
+    background-color: #DB545A;
+    border-color: #DB545A;
+}
+.form-check-input:focus{
+    -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 5px #db545b62;
+    box-shadow: 0 0 0 1px #fff, 0 0 0 5px #db545b62;
+}
+.form-check-input:checked[type=checkbox] {
+    background-image: url(src/icon/x.png);
+}
+.filtry .form-control{
+    width: 100px;
+    display: inline;
+}
+.filtry .form-control input{
+    width: 100px;
+    border: transparent;
+    background-color: transparent;
+}
+.filtry .form-control input:focus{
+    outline: none;
+}
+.s-img{
+    text-align: center;
+}
+.s-produkt{
+    border-top: 1px solid black;
+    list-style-type: none;
+}
+.s-right-panel{
+    text-align: right;
+}
+.s-rating{
+    color: #444;
+}
+.s-rating img{
+    margin-top: -7px;
+}
+.s-price{
+    color: #DB545A;
+    font-size: xx-large;
+    font: 700;
+}
+.s-produkt-button{
+    text-align: center;
+    background: #DB545A;
+    color: white;
+    width: 200px;
+    padding: 10px 5px 4px 5px;
+    cursor: pointer;
+    float: right;
+    -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 4px #DB545A;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #DB545A;
+    margin-top: 5px;
+    transition: 0.1s;
+    
+}
+.s-produkt-button:hover{
+    transform: scale(1.02);
+    background: #cc4f55; 
+}
+.page-link{
+    border: 2px solid black;
+    color: black;
+    margin: 8px;
+    transition: 0.1s;
+}
+.page-link:hover{
+    background: white;
+    color: black;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 2px solid black;
+    transform: scale(1.02);
+}

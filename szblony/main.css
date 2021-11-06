@@ -1,0 +1,180 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.navbar{
+    border-bottom: 1px solid black;
+    -webkit-box-shadow: 0px 9px 51px -31px rgba(0,0,0,0.82);
+    -moz-box-shadow: 0px 9px 51px -31px rgba(0,0,0,0.82);
+    box-shadow: 0px 9px 51px -31px rgba(0,0,0,0.82);
+}
+.navbar figure{
+    text-align: center;
+}
+.nav-search{
+    border: solid 3px black;
+    border-radius: 50px;
+    width: 40%;
+}
+.nav-search img{
+    background-color: black;
+    padding: 3px 30px;
+    display: inline-block;
+    height: 30px;
+    border-radius: 50px;
+}
+.nav-search input{
+    border: transparent;
+    background-color: transparent;
+    padding-left: 10px;
+    width: 90%;
+
+}
+.nav-search input:focus{
+    outline: none;
+}
+footer{
+    background: #333;
+    min-height: 350px;
+    padding: 60px;
+    color: white;
+    -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 5px #333;
+    box-shadow: 0 0 0 3px #fff, 0 0 0 5px #333;
+}
+.f-logo{
+    
+    box-sizing: content-box;
+    background: #fff;
+    padding: 15px;
+    border: 2px solid black;
+    
+}
+
+.f-container-logo{
+    text-align: left;
+}
+.f-list{
+    text-align: center;
+    padding-left: 0;
+    list-style-type: none;
+    
+}
+.f-list a{
+    color: #949494;
+}
+.f-social-title{
+    font-size: x-large;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.f-social-icon figure figcaption{
+    color: black;
+    padding-bottom: 5px;
+}
+.f-social-icon figure{
+    background: white;
+    border: 2px solid black;
+    min-width: 80px;
+    text-align: center;
+}
+.f-social-icon figure img{
+    width: 100%;
+    max-width: 200px;
+    padding: 15px;
+}
+.line{
+    position: relative;
+    display: block;
+    border: 2px solid #DB545A;
+    left: 18px;
+    width: 450px;
+    bottom: 5px;
+}
+.link-none{
+    text-decoration: none;
+    color: black;
+}
+.link-none:hover{
+    text-decoration: none;
+    color: black;
+}
+.text-red{
+    color:#DB545A;
+}
+
+.menu{
+    border: 2px solid black;
+    padding: 10px;
+}
+.menu ul{
+    list-style-type: none;
+}
+.menu-list li{
+    padding-left: 10px;
+}
+.produkt-a{
+    text-align: center;
+    padding-bottom: 50px;
+}
+.produkt-a img{
+    height: 110px;
+}
+.price{
+    color: #DB545A;
+    float: right;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+}
+.ul-none{
+    list-style-type: none;
+    margin-left: -30px;
+}
+.hr{
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    border-top: 3px solid black;
+}
+.form-check-input:checked{
+    background-color: #DB545A;
+    border-color: #DB545A;
+}
+.form-check-input:focus{
+    -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 5px #db545b62;
+    box-shadow: 0 0 0 1px #fff, 0 0 0 5px #db545b62;
+}
+.form-check-input:checked[type=checkbox] {
+    background-image: url(src/icon/x.png);
+}
+@media only screen and (max-width: 990px) {
+    .nav-search{
+        width: 85%;
+    }
+    .f-container-logo{
+        text-align: center;
+    }
+    .f-social-icon figure img{
+        width: 20%;
+        padding: 5px;
+    } 
+    .f-social-icon figure figcaption{
+        font-size: x-large;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .line{
+        position: relative;
+        display: block;
+        border: 2px solid #DB545A;
+        left: 18px;
+        width: 350px;
+        bottom: 5px;
+    }
+}

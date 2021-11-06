@@ -1,0 +1,191 @@
+.s-img{
+    text-align: center;
+}
+.s-produkt{
+    border-top: 1px solid black;
+    list-style-type: none;
+}
+.s-right-panel{
+    text-align: right;
+}
+.s-rating{
+    color: #444;
+}
+.s-rating img{
+    margin-top: -7px;
+}
+.s-price{
+    color: #DB545A;
+    font-size: xx-large;
+    font: 700;
+}
+.s-produkt-button{
+    display: inline-block;
+    text-align: center;
+    background: #bbbbbb;
+    color: white;
+    width: 200px;
+    padding: 10px 5px 4px 5px;
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 4px #bbb;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #bbb;
+    margin-top: 5px;
+    transition: 0.1s;
+}
+.s-produkt-button:hover{
+    transform: scale(1.02);
+    background: rgb(172, 172, 172); 
+}
+.counter-button{
+    display: inline-block;
+    padding: 4px;
+    font-size: x-large;
+    border: 2px solid black;
+    width: 50px;
+    cursor: pointer;
+    text-align: center;
+}
+.s-produkt-counter{
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+.counter{
+    display: inline-block;
+    padding: 3px;
+    font-size: x-large;
+    border: 2px solid black;
+    width: 70px;
+    text-align: center;
+}
+.counter input{
+    width: 50px;
+    border: transparent;
+    background-color: transparent;
+    text-align: center;
+}
+.counter input:focus{
+    outline: none;
+}
+.cart{
+    border: 1px solid black;
+    padding: 40px 10px;
+    margin-bottom: 30px;
+    top: 100px;
+    position: sticky;
+}
+.cart-button-1{
+   width: 90%; 
+   border: 3px solid #bbb;
+   font-size: x-large;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 5px 0;
+   cursor: pointer;
+   transition: 0.1s;
+}
+.cart-button-1:hover{
+    transform: scale(1.02);
+}
+.cart-button-2{
+   width: 90%; 
+   border: 3px solid #DB545A;
+   background: #DB545A;
+   color: white;
+   font-size: x-large;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 5px 0;
+   cursor: pointer;
+   transition: 0.1s;
+   margin-top: 10px;
+}
+.cart-button-2:hover{
+    transform: scale(1.02);
+}
+.cart-check{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    left: 10px;
+    top: 0;
+    border-width: 2px;
+}
+.cart-bar{
+    background-color: #eee;
+    padding: 10px;
+    border: 2px solid rgb(194, 194, 194);
+    margin-right: 4px;
+    height: 30px;
+    box-sizing: content-box;
+    font-size: large;
+}
+.cart-bar-r{
+    display: inline-block;
+    float: right;
+}
+.cart-bar-r span{
+    margin-right: 50px;
+    cursor: pointer;
+}
+.crat-bar-l{
+    display: inline-block;
+    
+}
+.cart-bar-check{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    left: 2px;
+    top: -4px;
+    border-width: 2px;
+}
+@media only screen and (max-width: 600px) {
+    .cart-bar-r span{
+        margin-right: 5px;
+    }
+    .counter-button{
+        display: inline-block;
+        padding: 4px;
+        font-size: large;
+        border: 2px solid black;
+        width: 50px;
+        cursor: pointer;
+        text-align: center;
+    }
+    .s-produkt-counter{
+        display: inline-block;
+        margin-right: 10px;
+        margin-top: 3px;
+    }
+    .counter{
+        display: inline-block;
+        padding: 3px;
+        font-size: large;
+        border: 2px solid black;
+        width: 70px;
+        text-align: center;
+    }
+    .counter input{
+        width: 50px;
+        border: transparent;
+        background-color: transparent;
+        text-align: center;
+    }
+    .s-produkt-button{
+        display: inline-block;
+        text-align: center;
+        background: #bbbbbb;
+        color: white;
+        width: 160px;
+        padding: 10px 1px 1px 1px;
+        cursor: pointer;
+        font-size: large;
+        -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 4px #bbb;
+        box-shadow: 0 0 0 2px #fff, 0 0 0 4px #bbb;
+        margin-top: 5px;
+        transition: 0.1s;
+    }
+}
