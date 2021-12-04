@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 04 Gru 2021, 13:53
+-- Czas generowania: 04 Gru 2021, 14:56
 -- Wersja serwera: 10.4.21-MariaDB
 -- Wersja PHP: 7.3.31
 
@@ -167,7 +167,8 @@ ALTER TABLE `produkty`
 -- Indeksy dla tabeli `uzytkownik`
 --
 ALTER TABLE `uzytkownik`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `mail` (`mail`);
 
 --
 -- Indeksy dla tabeli `zamowienie`
