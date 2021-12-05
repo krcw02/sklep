@@ -13,18 +13,18 @@ router.get('/', function (req, res) {
 })
 
 router.get('/rejestracja', function (req, res) {
-    if(req.session.userid){
+    if (req.session.userid) {
         res.render('/strona_glowna');
     }
-    
+
     res.render('Rejestracja');
 })
 
 router.post('/rejestracja', urlencodedParser, async (req, res) => {
-    if(req.session.userid){
+    if (req.session.userid) {
         res.render('/strona_glowna');
     }
-    
+
     let email = req.body.email;
     let pass;
     if (req.body.pass[0] != req.body.pass[1]) {
@@ -34,12 +34,12 @@ router.post('/rejestracja', urlencodedParser, async (req, res) => {
         pass = req.body.pass[0];
     }
 
-    if (true) { // SQL jesli user jest w bazie
+    if (false) { // SQL jesli user jest w bazie
         res.render('Rejestracja', { error: 'Podany email jest już zajety' });
 
     } else {
         // SQL wpisanie usera do bazy $email $pass
-        res.render('/strona_glowna');
+        res.render('Logowanie');
 
     }
 
@@ -47,26 +47,32 @@ router.post('/rejestracja', urlencodedParser, async (req, res) => {
 });
 
 router.get('/logowanie', function (req, res) {
-    if(req.session.userid){
-        res.render('/strona_glowna');
+
+    if (req.session.userid) {
+        res.render('strona_glowna');
+    } else {
+        res.render('Logowanie');
     }
-    res.render('Logowanie');
+
 })
 
 router.post('/logowanie', urlencodedParser, async (req, res) => {
-    if(req.session.userid){
-        res.render('/strona_glowna');
-    }
-    let email = req.body.email;
-    let pass = req.body.pass;
 
-    if (true) { //SQL sprawdzenie czy dane logowania sa poprawne $email $pass
+    if (req.session.userid) {
         res.render('strona_glowna');
-        req.session.userid = email
     } else {
-        res.render('Logowanie', { error: 'Login lub hasło są nieprawidłowe' });
-    }
+        let email = req.body.email;
+        let pass = req.body.pass;
 
+        req.session.userid = email
+
+        if (true) { //SQL sprawdzenie czy dane logowania sa poprawne $email $pass
+            res.render('strona_glowna');
+
+        } else {
+            res.render('Logowanie', { error: 'Login lub hasło są nieprawidłowe' });
+        }
+    }
 
 
 });
