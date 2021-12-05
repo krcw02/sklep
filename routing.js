@@ -1,6 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const bodyParser = require('body-parser');
+const bcrypt = require('bcryptjs');
+
 const {json} = require('body-parser');
 const knex = require('knex')({
     client: 'mysql',
@@ -56,9 +58,19 @@ router.post('/rejestracja', urlencodedParser, async (req, res) => {
         res.render('Rejestracja', {error: 'Podany email jest już zajety'});
 
     } else {
-        knex('uzytkownik').insert({typ: 'normalny', koszyk: 'tak', haslo: pass, mail: email}).then(function (result) {
+        bcrypt.genSalt(10, function (err, salt) {
+            bcrypt.hash(pass, salt, function (err, hash) {
+                knex('uzytkownik').insert({
+                    typ: 'normalny',
+                    koszyk: 'tak',
+                    haslo: hash,
+                    mail: email
+                }).then(function (result) {
+                })
+                res.render('Logowanie');
+            })
         })
-        res.render('Logowanie');
+
 
     }
 
@@ -85,12 +97,16 @@ router.post('/logowanie', urlencodedParser, async (req, res) => {
         let loginres
         await knex.select('mail', 'haslo').table('uzytkownik').where('mail', 'like', email).then(rows => {
             rows.forEach(row => {
-                if (row.mail == email && pass == row.haslo) {
-                    req.session.userid = email
-                    res.render('strona_glowna')
-                } else {
-                    res.render('Logowanie', {error: 'Login lub hasło są nieprawidłowe'});
-                }
+                bcrypt.compare(pass, row.haslo, function (err, result) {
+                    if (err)
+                        console.log(err)
+                    if (result) {
+                        req.session.userid = email
+                        res.render('strona_glowna')
+                    } else
+                        res.render('Logowanie', {error: 'Login lub hasło są nieprawidłowe'});
+
+                })
             })
         })
     }
