@@ -9,7 +9,7 @@ const knex = require('knex')({
     connection: {
         host: '127.0.0.1',
         port: 3306,
-        user: 'root',
+        user: 'sklep', // root on windows
         password: '',
         database: 'sklep'
     }
@@ -21,12 +21,12 @@ var urlencodedParser = bodyParser.urlencoded({extended: false})
 var session;
 
 router.get('/', function (req, res) {
-    res.render('index')
+    res.render('strona_glowna')
 })
 
 router.get('/rejestracja', function (req, res) {
     if (req.session.userid) {
-        res.render('/strona_glowna');
+        res.render('strona_glowna');
     }
 
     res.render('Rejestracja');
@@ -34,12 +34,22 @@ router.get('/rejestracja', function (req, res) {
 
 router.post('/rejestracja', urlencodedParser, async (req, res) => {
     if (req.session.userid) {
-        res.render('/strona_glowna');
+        res.render('strona_glowna');
     }
-
+    
     let email = req.body.email;
     let pass;
     let response = true //Promise na sprawdzenie maila w bazie
+    if (req.body.pass[0] != req.body.pass[1]) {
+        res.render('Rejestracja', {error: 'Podane hasła nie sa takie same!'});
+        
+    } else {
+        pass = req.body.pass[0];
+        if(email.length < 1 || pass.length < 1){
+            res.render('Rejestracja', {error: 'Pola nie mogą być puste'});
+        }
+    }
+
     await knex.select('mail').table('uzytkownik').where('mail', 'like', email).then(rows => {
         rows.forEach(row => {
             if (row.mail == email) {
@@ -47,12 +57,7 @@ router.post('/rejestracja', urlencodedParser, async (req, res) => {
             }
         })
     })
-    if (req.body.pass[0] != req.body.pass[1]) {
-        res.render('Rejestracja', {error: 'Podane hasła nie sa takie same!'});
-
-    } else {
-        pass = req.body.pass[0];
-    }
+    
 
     if (!response) { // SQL jesli user jest w bazie
         res.render('Rejestracja', {error: 'Podany email jest już zajety'});

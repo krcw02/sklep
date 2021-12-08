@@ -35,11 +35,11 @@
                     <form class="cart m-auto m-lg-none" action="/rejestracja" method="POST">
                         <h2>Zarejestruj się</h2>
                         <span class="line"></span><br><br>
-                        <input type="email" class="form-control f-input" name="email" placeholder="E-mail lub login">
+                        <input type="email" class="form-control f-input" name="email" placeholder="E-mail lub login" pattern=".{1,}">
                         <br>
-                        <input type="password" class="form-control f-input" name="pass" placeholder="Hasło">
+                        <input type="password" class="form-control f-input" name="pass" placeholder="Hasło" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                         <br>
-                        <input type="password" class="form-control f-input" name="pass" placeholder="Hasło">
+                        <input type="password" class="form-control f-input" name="pass" placeholder="Hasło" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                         <br>
                         <p style="color: red;">{{error}}</p>
                         <input type="submit" class="cart-button-2" value="Zarejestruj">
